@@ -11,6 +11,7 @@ const hooray = new Audio("../shared/sounds/hooray.wav");
 const twinkle = new Audio("../shared/sounds/twinkle.mp3");
 const colorList = ["red", "blue", "violet", "lightblue", "white", "pink", "lightgreen"];
 let lastColor = "white";
+let loop;
 
 function flash() {
     let randomColor = colorList[Math.floor(Math.random()*colorList.length)];
@@ -70,4 +71,4 @@ function playSound() {
 }
 
 count();
-let loop = setInterval(count, 1000);
+loop = setInterval(count, 1000);
