@@ -1,0 +1,214 @@
+/* import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&family=Raleway:ital,wght@0,100;0,200;0,400;0,500;0,800;0,900;1,100;1,200;1,400;1,500;1,800;1,900&display=swap');
+@import url('https://fonts.cdnfonts.com/css/cascadia-code');
+
+@font-face {
+    font-family: 'Cascadia';
+    font-style: normal;
+    src: url("../shared/fonts/CascadiaCode.woff2") format('woff2');
+}
+
+@font-face {
+    font-family: 'Cascadia';
+    font-style: italic;
+    src: url("../shared/fonts/CascadiaCodeItalic.woff2") format('woff2');
+}
+
+:root {
+    /* define vars here */
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(255, 251, 233);
+}
+
+body {
+    box-sizing: border-box;
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    height: 100dvh;
+    width: 100vw;
+
+    overflow: hidden;
+}
+
+p {
+    font-family: "Cascadia", sans-serif;
+    color: #46291d;
+    margin: 3em 1em;
+}
+
+#letter1 {
+    font-size: 1.3em;
+    padding: 2em 2.5em;
+
+    height: 80%;
+    width: 70%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: none;
+
+}
+
+#letter1.display {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 0.08s;
+    transition-timing-function: ease-in;
+    transition-delay: 0s;
+}
+
+#letter1.visible{
+    opacity: 1;
+    z-index: 2;
+}
+
+#letter-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+#signature {
+    display: block;
+    padding: 0 auto;
+    text-align: right;
+    font-size: 0.9em;
+}
+
+#letter-icon {
+    height: 12em;
+    width: auto;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-80%, -380%);
+    transition-property: transform;
+    transition-duration: 1.3s;
+    transition-timing-function: cubic-bezier(0.185, 0.585, 0.280, 1.065);
+    transition-delay: 1s;
+}
+
+#letter-icon.slide-in {
+    transform-origin: top right;
+    transform: translate(-70%, -120%) rotate(-20deg);
+}
+
+button, button:hover {
+    color: #fbd9c4;
+    background-color: #593524;
+    border: 0.4em solid #8c6549;
+    border-radius: 0.6em;
+    padding: 2em 4em;
+}
+
+button#open {
+    font-size: 1.3em;
+
+    height: 7em;
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 150%);
+
+    padding: 0.8em 4em;
+
+    opacity: 1;
+    transition-property: opacity;
+    transition-duration: 0.06s;
+    transition-timing-function: ease-in;
+    transition-delay: 0s;
+}
+
+button#proceed {
+    font-size: 1.7em;
+
+    height: 5em;
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 170%);
+
+    padding: 1em 2em;
+
+    opacity: 1;
+    transition-property: opacity;
+    transition-duration: 0.06s;
+    transition-timing-function: ease-in;
+    transition-delay: 0s;
+
+    color: #c1ceb8;
+    border-color: #51372f;
+    background-color: #51774e;
+}
+
+.no-display {
+    display: none !important;
+}
+
+.hidden {
+    opacity: 0 !important;
+}
+
+#letter2-icon {
+    height: 12em;
+    width: auto;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-80%, -380%);
+    transition-property: transform;
+    transition-duration: 1.3s;
+    transition-timing-function: cubic-bezier(0.185, 0.585, 0.280, 1.065);
+    transition-delay: 1.3s;
+}
+
+#letter2-icon.slide-in {
+    transform-origin: top right;
+    transform: translate(-70%, -120%) rotate(-20deg);
+}
+
+#letter2-icon.fly-off {
+    transform-origin: top right;
+    transform: translate(200%, -350%) rotate(-160deg);
+
+    transition-property: transform;
+    transition-duration: 1.1s;
+    transition-timing-function: cubic-bezier(0.645, 0.110, 0.415, 1.650);
+    transition-delay: 0.1s;
+}
+
+#treeline {
+    height: auto;
+    width: 20em;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(200%, -50%) scale(0.4);
+}
+
+#treeline.camera {
+    transform: translate(-50%, -50%) scale(1);
+
+    transition-property: transform;
+    transition-duration: 6s;
+    transition-timing-function: ease-out;
+    transition-delay: 2s;
+}

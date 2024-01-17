@@ -1,0 +1,260 @@
+/* import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&family=Raleway:ital,wght@0,100;0,200;0,400;0,500;0,800;0,900;1,100;1,200;1,400;1,500;1,800;1,900&display=swap');
+@import url('https://fonts.cdnfonts.com/css/cascadia-code');
+
+@font-face {
+    font-family: 'Cascadia';
+    font-style: normal;
+    src: url("../fonts/CascadiaCode.woff2") format('woff2');
+}
+
+@font-face {
+    font-family: 'Cascadia';
+    font-style: italic;
+    src: url("../fonts/CascadiaCodeItalic.woff2") format('woff2');
+}
+
+:root {
+    /* define vars here */
+    --stage-url: url(../backgrounds/test-bg.jpg);
+}
+
+html {
+    background-color: rgb(2, 2, 2);
+}
+
+body {
+    background:
+        radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%),
+        var(--stage-url);
+    background-repeat: no-repeat, no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    font-family: "Cascadia", sans-serif;
+    color: #b6ebf5;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0.8em;
+    height: 100dvh;
+    width: 100vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 0.9%;
+
+    z-index: -5;
+}
+
+#narration, #button-container, #item-display {
+    background-color: rgba(9, 22, 31, 0.747);
+    backdrop-filter: blur(0.1em);
+    border: 2px solid #72abaf;
+    border-radius: 6px;
+    padding: 3%;
+}
+
+#narration {
+    flex: 1;
+    font-size: 85%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+#action-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1.6%;
+}
+
+#button-container {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.4em;
+    row-gap: 0.4em;
+}
+
+button {
+    min-height: 4.6em;
+    padding: 2%;
+    font-family: "Cascadia", sans-serif;
+    font-size: 80%;
+
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 10em;
+
+    border-width: 0.25em;
+    border-style: solid;
+    border-radius: 8px;
+}
+
+button.item_action {
+    color: #0b0a09;
+    background-color: #ff9c1a;
+    border-color: #b5671a;
+}
+
+button.darkness {
+    color: #7d9395;
+    background-color: #080909;
+    border-color: #505a5b;
+}
+
+button.keypad {
+    padding: 0;
+    box-sizing: border-box;
+    flex-grow: 1;
+    flex-basis: 27%;
+}
+
+button.mountain-door {
+    color: #8298ac;
+    border-color: #6c7984;
+    background-color: #172a3c;
+}
+
+#item-display {
+    box-sizing: border-box;
+    width: 5em;
+    padding: 0.5em;
+
+    color: rgba(204, 204, 204, 0.39);
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.5em;
+}
+
+#item-display p {
+    flex: none;
+    margin: auto;
+    padding: 0.07em;
+
+    font-size: 0.9em;
+}
+
+img.item {
+    flex: 0;
+    width: 60%;
+    height: auto;
+}
+
+.extender {
+    flex-basis: 100%;
+}
+
+span.highlight {
+    color: rgb(79, 160, 207);
+}
+
+span.item {
+    color: rgb(255, 182, 87);
+}
+
+span.yellow {
+    color: #FFF44F;
+}
+
+@property --opacity {
+    syntax: '<number>'; /* <- defined as type number for the transition to work */
+    initial-value: 0.2;
+    inherits: false;
+}
+
+@keyframes fadeOut {
+    50% {--opacity: 0.6}
+}
+
+.pulse {
+    animation: 0.2s fadeOut 1;
+    background:
+        radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0) 0%, rgba(0 0 0 / var(--opacity)) 100%),
+        var(--stage-url);
+    background-repeat: no-repeat, no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#act-container {
+    display: none;
+}
+
+#act-container.final-act {
+    flex: 1;
+    display: block;
+
+    font-size: 1em;
+    padding: 1em 1.5em;
+    color: #46291d;
+
+    overflow-y: scroll;
+    z-index: 5;
+
+}
+
+body.final-act-2 {
+    background: white;
+    justify-content: center;
+    gap: 6%;
+}
+
+.act-paragraph {
+    color: white;
+    text-align: center;
+}
+
+.act-paragraph-inverted {
+    color: black;
+    text-align: center;
+}
+
+.white-text-transition {
+    color: white !important;
+    transition-property: color;
+    transition-timing-function: linear;
+    transition-delay: 3s;
+    transition-duration: 1.5s;
+}
+
+.black-text-transition {
+    color: black !important;
+    transition-property: color;
+    transition-timing-function: linear;
+    transition-delay: 3s;
+    transition-duration: 1.5s;
+}
+
+.body-bg-transition {
+    background: black !important;
+    transition-property: background;
+    transition-timing-function: linear;
+    transition-delay: 3s;
+    transition-duration: 4s;
+}
+
+#letter-read {
+    margin: 0 auto;
+}
+
+#letter-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+
+    z-index: -1;
+}

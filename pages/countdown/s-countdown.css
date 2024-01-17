@@ -1,0 +1,83 @@
+/* import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&family=Raleway:ital,wght@0,100;0,200;0,400;0,500;0,800;0,900;1,100;1,200;1,400;1,500;1,800;1,900&display=swap');
+@import url('https://fonts.cdnfonts.com/css/cascadia-code');
+
+@font-face {
+    font-family: 'Cascadia';
+    font-style: normal;
+    src: url("../shared/fonts/CascadiaCode.woff2") format('woff2');
+}
+
+@font-face {
+    font-family: 'Cascadia';
+    font-style: italic;
+    src: url("../shared/fonts/CascadiaCodeItalic.woff2") format('woff2');
+}
+
+:root {
+    --clock-color: rgb(168, 209, 107);
+    --clock-glow: rgba(203, 236, 152, 0.411);
+}
+
+html {
+    background-color: rgb(2, 2, 2);
+}
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 20px;
+    height: 100dvh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#disclaimer {
+    margin-bottom: auto;
+    font-size: 3vw;
+    font-family: "Cascadia", sans-serif;
+    font-weight: 300;
+    color: #ffccfa;
+}
+
+#headphones {
+    height: 1em;
+    width: auto;
+}
+
+#clock-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    font-size: 9vw;
+    font-family: "Orbitron", sans-serif;
+    color: var(--clock-color);
+    text-shadow: 0px 0px 5vw var(--clock-glow);
+}
+
+#gbt {
+    display: none;
+}
+
+.inactive {
+    display: none !important;
+}
+
+#gbt.active {
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    font-size: 12vw;
+    font-family: "Cascadia", sans-serif;
+    color: white;
+    text-align: center;
+}
+

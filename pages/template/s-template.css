@@ -1,0 +1,113 @@
+/* import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&family=Raleway:ital,wght@0,100;0,200;0,400;0,500;0,800;0,900;1,100;1,200;1,400;1,500;1,800;1,900&display=swap');
+@import url('https://fonts.cdnfonts.com/css/cascadia-code');
+
+@font-face {
+    font-family: 'Cascadia';
+    font-style: normal;
+    src: url("../shared/fonts/CascadiaCode.woff2") format('woff2');
+}
+
+@font-face {
+    font-family: 'Cascadia';
+    font-style: italic;
+    src: url("../shared/fonts/CascadiaCodeItalic.woff2") format('woff2');
+}
+
+:root {
+    /* define colors here */
+    --clock-color: rgb(168, 209, 107);
+    --clock-glow: rgba(203, 236, 152, 0.411);
+}
+
+html {
+    background-color: rgb(2, 2, 2);
+}
+
+body {
+    background:
+        radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%),
+        url(../shared/backgrounds/test-forest.png);
+    background-repeat: no-repeat, no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    font-family: "Cascadia", sans-serif;
+    color: #b6ebf5;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 2%;
+    height: 100dvh;
+    width: 100vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 1.2%;
+}
+
+#narration, #button-container {
+    background-color: rgba(9, 22, 31, 0.747);
+    backdrop-filter: blur(100%);
+    border: 2px solid #72abaf;
+    border-radius: 6px;
+    padding: 3%;
+}
+
+#narration {
+    flex: 1;
+    font-size: 85%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+#button-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.4em;
+    row-gap: 0.4em;
+}
+
+button {
+    height: 7vh;
+    padding: 2%;
+    font-family: "Cascadia", sans-serif;
+    font-size: 80%;
+
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 10em;
+
+    border-width: 0.25em;
+    border-style: solid;
+    border-radius: 8px;
+}
+
+button.forest {
+    color: #a5875f;
+    border-color: #8a6f4b;
+    background-color: #4d2e23;
+}
+
+#longer {
+    flex-grow: 200;
+}
+
+span#white {
+    color: rgb(214, 214, 214);
+}
+
+span#blue {
+    color: rgb(214, 214, 214);
+}
+
+span#orange {
+    color: rgb(214, 214, 214);
+}
