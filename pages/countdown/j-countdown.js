@@ -20,7 +20,7 @@ function flash() {
     }
     gbt.style.color = randomColor;
     counter += 1;
-    if (counter >= 60) {
+    if (counter >= 120) {
         clearInterval(exitCode);
         window.location.replace("../message/h-message.html");
     }
