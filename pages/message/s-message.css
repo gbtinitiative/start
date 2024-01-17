@@ -96,7 +96,7 @@ p {
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-80%, -380%);
+    transform: translate(-80%, -440%);
     transition-property: transform;
     transition-duration: 1.3s;
     transition-timing-function: cubic-bezier(0.185, 0.585, 0.280, 1.065);
@@ -173,7 +173,7 @@ button#proceed {
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-80%, -380%);
+    transform: translate(-80%, -440%);
     transition-property: transform;
     transition-duration: 1.3s;
     transition-timing-function: cubic-bezier(0.185, 0.585, 0.280, 1.065);
