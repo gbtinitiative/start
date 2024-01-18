@@ -24,7 +24,7 @@ const stateObj = {
     },
 
     "forestSignpost": {
-        narration: "it reads:%^\"It appears you have gotten lost in the woods. Fear not, for you are neither the first nor the last traveller to end up here.%^You have been brought here by the wind, and the wind shall guide you back once it is time. For now, however, heed this warning:%^The forest is ever-changing. The terrain adapts to suit each visitor. To find what you seek, you must find the answer within yourself. Do not overthink it. You've known it for your entire life. #Listen to the trees# and #let the wind help you#.%^The left path is #short#, and the right path #long#. But the correct path runs through both. #Encode your identity# to find it.%^#Hint:# You must walk through 8 paths in total. The trees favor brevity. Keep it simple.\"",
+        narration: "it reads:%^\"It appears you have gotten lost in the woods. Fear not, for you are neither the first nor the last traveller to end up here.%^You have been brought here by the wind, and the wind shall guide you back once it is time. For now, however, heed this warning:%^The forest is ever-changing. The terrain adapts to suit each visitor. To find what you seek, you must find the answer within yourself. Do not overthink it. You've known it for your entire life. #Listen to the trees# and #let the wind help you#.%^The right path is #short#, and the left path #long#. But the correct path runs through both. #Encode your identity# to find it.%^#Hint:# You must walk through 8 paths in total. The trees favor brevity. Keep it simple.\"",
         actionSet: "forestPath",
         stage: "forestBG",
         sound: "none"
